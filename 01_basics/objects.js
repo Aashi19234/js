@@ -26,6 +26,72 @@ console.log(name.greeting());*/
 }*/
 //console.log(name.greetingtwo());
 
+//object through constructor
+
+//const tinderuser=new Object()
+const tinderuser ={}// another way of declaring object
+tinderuser.id="12345ab"
+tinderuser.name="rohan"
+tinderuser.age=20
+//console.log(tinderuser);
+
+const regularuser={
+    email:"hello@google.com",
+    fullname:{
+        userfullname:{//nesting of objects
+            firstname:"aastha",
+            lastname:"jain",
+        }
+    }
+}
+//console.log(regularuser.fullname);
+
+//optional chaining
+console.log(regularuser.fullname?.userfullname.firstname);//if we have to check whether a certain property is present or not
+
+//merging of objects
+const obj1={1: "a", 2:"b"}
+const obj2={3:"c", 4:"d"}
+//const obj3=Object.assign(obj1,obj2)
+//onsole.log(obj3);
+// another way of merging
+//const obj3=Object.assign({},obj1,obj2)// ensures guaranteed result
+//console.log(obj3);
+
+
+// using spread operator to merge objects
+const obj3={...obj1,...obj2}
+//console.log(obj3);
+
+const users=[
+    {
+        id:1,
+        email:"12@gmail.com"
+
+    },
+    {
+        id:1,
+        email:"12@gmail.com"
+
+    },
+    {
+        id:1,
+        email:"12@gmail.com"
+
+    },
+]
+//console.log(users[1].email);
+
+/*console.log(tinderuser);
+console.log(Object.keys(tinderuser));//keys has the datatype array which can be worked on loops
+console.log(Object.values(tinderuser));//array datatype
+console.log(Object.entries(tinderuser));// it is nested array
+console.log(tinderuser.hasOwnProperty('age'));*///returns boolean output
+
+
+
+
+
 
 
 
