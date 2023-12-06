@@ -18,8 +18,8 @@ for (const greet of greetings) {
 
 
 //const map= new Map()
-map.set('IN', "India")
-map.set('usa', "united states")
+/*map.set('IN', "India")
+map.set('usa', "united states")*/
 //console.log(map);
 
 // prints only unique items
@@ -56,16 +56,16 @@ for (const key in myobj) {
     console.log(`${key} is shortcut for ${myobj[key]}`);
 }*/
 
-const programming=["js", "cpp", "c"]
+/*const programming=["js", "cpp", "c"]
 for (const key in programming) {
     console.log(programming[key]);
     
-}
+}*/
 
 // in for in loop we cannot access values directly but in for of loop we can access values directly
 //const map= new Map()
-map.set('IN', "India")
-map.set('usa', "united states")
+/*map.set('IN', "India")
+map.set('usa', "united states")*/
 
 /*for (const key in map) {
     console.log(key);
@@ -76,6 +76,32 @@ map.set('usa', "united states")
 // for each loop
 
 const coding =["js", "ruby", "java"]
+ /*coding.forEach( function (item) {
+    console.log(item);
+ })*/
+
+ /*coding.forEach( (item)=>{
+    console.log(item);
+ })*/
+
+ /*coding.forEach( (item, index,arr)=>{
+    console.log(item,index,arr);
+ })*/
+
+ const mycoding= [
+    {
+    languagename: "java",
+    languagefile: "vs"
+    },
+    {
+        languagename: "java",
+        languagefile: "vs"
+        }
+ ]
+ mycoding.forEach((item)=>{
+    console.log(item.languagename);
+ })
+
 
 
 
