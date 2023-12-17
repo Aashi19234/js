@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+
+    </ul>
+    
+</body>
+<script>
+    // to add a list element
+    function addLanguage(langname){
+       const li= document.createElement('li');
+       li.innerHTML=`${langname}`
+       document.querySelector('.language').appendChild(li)
+
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    // optimised approach
+    function addanother(langname){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addanother('golang')
+    //this is optimised because we dont have to traverse full tree we directly created li node and inserted text node
+
+
+    // Editing 
+   const second= document.querySelector("li:nth-child(2)")
+   // second.innerHTML= "MOJO"
+    const newli=document.createElement('li')
+    newli.textContent="mojo"
+    second.replaceWith(newli)
+
+
+    // edit
+    const first=document.querySelector("li:nth-child(1)")
+    first.outerHTML='<li>Typescript</li>'
+
+    // remove
+    const last=document.querySelector("li:last-child")
+    last.remove()
+
+</script>
+</html>
