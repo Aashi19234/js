@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+    
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library="React"
+            this.server="https://localhost:300"
+            // requiremnent
+            document
+            .querySelector('button')
+            .addEventListener('click', this.handleclick.bind(this))
+            // bind se hme sab cheezo ka access mil gya library server sbka johmne mention kr rkha h
+
+        }
+        handleclick(){
+            console.log("button clicked");
+            console.log(this);// dot operator ko leke hm library and server kisi ko bhi access kr skte h
+        }
+
+        
+    }
+    const app=new React()
+</script>
+</html>
