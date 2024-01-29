@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        input {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <title>25x25 Sudoku Solver</title>
+</head>
+<body>
+    <h1>25x25 Sudoku Solver</h1>
+
+    <table id="sudoku-grid"></table>
+
+    <button onclick="solveSudoku()">Solve Sudoku</button>
+
+    <script>
+        // Function to create the Sudoku grid
+        
+                // Function to solve the Sudoku puzzle
+function solveSudoku() {
+    const sudokuValues = getSudokuValues();
+    
+    // Implement your solving algorithm here
+    // For simplicity, this example uses a placeholder solution
+    const placeholderSolution = solveSudokuBacktracking(sudokuValues);
+
+    displaySolution(placeholderSolution);
+}
+
+// Backtracking algorithm to solve the Sudoku puzzle
+function solveSudokuBacktracking(board) {
+    const emptyCell = findEmptyCell(board);
+
+    if (!emptyCell) {
+        // Puzzle solved
+        return board;
+    }
+
+    const [row, col] = emptyCell;
+
+    for (let num = 1; num <= 25; num++) {
+        if (isSafe(board, row, col, num)) {
+            board[row][col] = num;
+
+            if (solveSudokuBacktracking(board)) {
+                return board;
+            }
+
+            // If placing the number leads to an invalid solution, backtrack
+            board[row][col] = 0;
+        }
+    }
+
+    // No number can be placed, backtrack
+    return null;
+}
+
+// Function to check if a number can be placed in a given cell
+function isSafe(board, row, col, num) {
+    // Check if the number is not present in the current row and column
+    if (board[row].includes(num) || board.some(r => r[col] === num)) {
+        return false;
+    }
+
+    // Check if the number is not present in the current 5x5 subgrid
+    const startRow = Math.floor(row / 5) * 5;
+    const startCol = Math.floor(col / 5) * 5;
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (board[startRow + i][startCol + j] === num) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+// Function to find an empty cell in the Sudoku board
+function findEmptyCell(board) {
+    for (let i = 0; i < 25; i++) {
+        for (let j = 0; j < 25; j++) {
+            if (board[i][j] === 0) {
+                return [i, j];
+            }
+        }
+    }
+    return null;
+}
+
+    </script>
+</body>
+</html>
