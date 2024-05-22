@@ -1,4 +1,4 @@
-/ Context are of type : 
+// Context are of type : 
 // Global Execution Context :  stored in this
 // Function Execution Context
 // Eval Execution Context
