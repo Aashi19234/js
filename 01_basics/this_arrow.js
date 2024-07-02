@@ -7,14 +7,14 @@ const user={
     welcomemessage: function(){
        
         console.log(`${this.username}, welcome to website`)
-        //console.log(this)
+        console.log(this)
     }
 
 
 }
-/*user.welcomemessage()
+user.welcomemessage()
 user.username="sam"
-user.welcomemessage()*/
+user.welcomemessage()
 //console.log(this)// outpit: empty object
 
 
@@ -27,12 +27,25 @@ user.welcomemessage()*/
 }
 tea()*/
 
+
+/*
+Function Scope and this Context
+In JavaScript, the value of this depends on the context in which the function is called, not where it is defined. When you call a 
+function in the global context, this inside the function refers to the global 
+object (window in a browser, global in Node.js) in non-strict mode. In strict mode, this is undefined.
+
+it means agr hme username access krna h toh hme function ko object k andr dalna hga then hm kr kskte hai.
+
+
+
+*/
+
 // arrow function
 
 const chai = () => {// arrow function
     let username= "aastha"
-    console.log(this.username);// undefined
-    console.log(this)// output: {}
+    //console.log(this.username);// undefined
+    //console.log(this)// output: {}
 }
 //chai()
 
@@ -47,7 +60,7 @@ const chai = () => {// arrow function
 
     
  
- console.log(addtwo(3,4));
+ //console.log(addtwo(3,4));
 
  // implicit return tyoe cannot return objects we have to use explicit return type for this
 

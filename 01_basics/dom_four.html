@@ -18,12 +18,28 @@
     div.setAttribute("title", "generated title")
     div.style.backgroundColor="green"
     div.style.padding="12px"
+    
     //div.innerText="chai aur code"// it overwrites
     // instead use this
     const addtext=document.createTextNode("Chai aur code")
+   const anothertext=document.createTextNode("Hello")
+   const space=document.createTextNode(" ")
+   const h1=document.createElement('h1')
+   h1.className="heading"
+   h1.setAttribute("title", "new-title")
+   h1.style.backgroundColor="blue"
+   h1.style.fontFamily="sans-serif"
+   h1.style.display="flex"
+   h1.style.justifyContent="center"
+   h1.style.alignItems="center"
+   const anotherh=document.createTextNode("Aastha Jain")
     // pasting this node in div
+    h1.appendChild(anotherh);
     div.appendChild(addtext)
+    div.appendChild(space)
+    div.appendChild(anothertext)
     // attaching this code  to document
+    document.body.appendChild(h1)
     document.body.appendChild(div)
     
 </script>

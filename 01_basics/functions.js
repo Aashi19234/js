@@ -12,17 +12,17 @@ function addnumbers(number1, number2){// parameters(values passed during functio
 
 }
 //addnumbers(3,4)//arguments(when function is called then which values are passed that are arguments)
-//const result= addnumbers(3,5)
-//console.log(result);// output: undefined(we have to return the functon too)
+/*const result= addnumbers(3,5)
+console.log(result);*/// output: undefined(we have to return the functon too)
 
 // to avoid this we have another way of printing
 function addnumbers(number1, number2){
     //let result=number1+number2(ese bhi kr skte h)
     return number1+number2
-
+}
     
 const result= addnumbers(3,5)
-//console.log(result)
+console.log(result)
 
 //different way of passing arguments and parameters
 function loginusermessage(username){
@@ -32,11 +32,17 @@ function loginusermessage(username){
     }
     return `${username} just logged in`
 }
-console.log(loginusermessage())
+console.log(loginusermessage("aastha"))
+// we should always paas arguments as string literal otheriwse it is treated as a variable and function looks for it definition,
+// and then it will give reference error.
+
+
+
+
 // in order to prevent undefined situation we can provide a default parameter so that even if user doesn't pass any value
 // it has that default value
 
-}
+
 
 
 
@@ -47,9 +53,13 @@ console.log(loginusermessage())
 //console.log(calculatecartprice(200,400,500))// this will print only first number in order to resolve it we have to use rest operator
 
 function calculatecartprice(...num1){// rest operator=...
+    // rest operator allows to present indefinite number of arguments as an array.
+
+
+
     return num1
 }
-//console.log(calculatecartprice(200,400,500))// returns array
+console.log(calculatecartprice(200,400,500))// returns array
 
 /*note: if we have val1 val2 and ...num1 in parameters the the output will be [500] because
 200 and 400 are covered in val1 and va2*/
@@ -59,18 +69,18 @@ const user ={
     username:"hitesh",
     price:199,
 }
-//function handleobject(anyobject){
-   // console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
-//}
+function handleobject(anyobject){
+console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
 //handleobject(user)
-/*handleobject({
+handleobject({
     username:"sam",
     price:399
-})*/
+})
 const arr=[20,40,50]
-//function returnsecvalue(getarray){
-    //return getarray[1]
-//}
-//console.log(returnsecvalue(arr))
+function returnsecvalue(getarray){
+    return getarray[1]
+}
+console.log(returnsecvalue(arr))
 
 

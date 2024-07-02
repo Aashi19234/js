@@ -4,7 +4,7 @@
     // condition= true then we will exectue the code here
 //}
 
-/*const isuserloggedin=true
+const isuserloggedin=true
 const temperature=21
 if(temperature<50){
     console.log("less than 50");
@@ -17,7 +17,7 @@ const score=200
 if(score>100){
     const power="fly"
     console.log(`user power: ${power}`)
-}*/
+}
 
 // var has a global scope thats why we dont use this instead we use let and const
 
@@ -94,7 +94,7 @@ if (loggedfromgoogle || loggedfromemail){
 
     // truthy and falsy
 
-    const userEmail = []// when we assume there is/ or not a value in the string it is truthy 
+    const userEmail = []// when we assume there is/ or not a value in the array it is truthy 
 
 if (userEmail) {
     console.log("Got user email");
@@ -109,9 +109,9 @@ if (userEmail) {
 //truthy values
 // "0", 'false', " ", [], {}, function(){} ("", ''-> string)
 
-// if (userEmail.length === 0) {
-//     console.log("Array is empty");
-// }
+ if (userEmail.length === 0) {
+     console.log("Array is empty");
+ }
 
 const emptyObj = {}
 
@@ -121,10 +121,12 @@ if (Object.keys(emptyObj).length === 0) {
 
 // Nullish Coalescing Operator (??): null, undefined
 
+// isme check hga agr left value null ya undefined hgi toh right vali return hgi vrna left vali hi return hgi.
+
 let val1;
-// val1 = 5 ?? 10
-// val1 = null ?? 10
-// val1 = undefined ?? 15
+ //val1 = 5 ?? 10
+ //val1 = null ?? 10
+ //val1 = undefined ?? 15
 val1 = null ?? 10 ?? 20
 
 

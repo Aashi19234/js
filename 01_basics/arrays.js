@@ -1,9 +1,9 @@
 const myArr=[1,4,56,7]
 //console.log(myArr);
 myArr.push(6)
-//console.log(myArr)
+console.log(myArr)
 myArr.pop()
-//console.log(myArr)
+console.log(myArr)
 myArr.unshift(9)// element will be pushed from front
 console.log(myArr)
 myArr.shift()

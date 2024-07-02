@@ -2,7 +2,7 @@
 // mtlb haath k haath kaam ni hga but eventually hga
 // example: file system, cryptography
 // three states of promises
-//1) pending 2) fulfilled 3)rejected
+// 1) fulfilled 3)rejected
 // mostly we consume promises
 
 
